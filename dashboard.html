@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Menú</title>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              nombre usuario
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/dashboard/paswordchange.html">cambiar Contraseña</a>
+              <a id="cerrarsesion" class="dropdown-item" >Cerrar sesion</a>
+            </div>
+          </div>
+        <div class="logo-menu">
+                <h1> panel foodqr's</h1>  
+        </div> 
+        <nav class="sidenav">
+            <ul>
+                <li><a href=""> Configurar sistema</a></li>
+               <li><a href="dashboard.html" >Cargar menú</a></li>
+               <li><a href="./ventas.html"> Ver pedidos</a></li>
+            </ul>
+       </nav>
+  </header>
+     <main>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 >Gestionar menú</h1>   
+            </div>
+        </div>
+         <!-- Button trigger modal -->
+     <button type="button" class="btn btn-primary" id="crear" data-toggle="modal" data-target="#exampleModal">
+        Cargar Menu
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Complete todos los espacios para crear un Nuevo Plato.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form  id="enviar">
+                    <div class="form-group">
+                        <label>Nombre producto</label>
+                        <input type="text" placeholder="Nombre del Producto" id="nombre" class="form-control">
+                    </div> 
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" placeholder="Nombre del Producto" id="file" class="form-control">
+                    </div> 
+                    <div class="form-group">
+                        <label>Precio</label>
+                        <input type="text" placeholder="$ Precio" id="precio" class="form-control">
+                    </div> 
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="descripcion" placeholder="Descripción" class="form-control"></textarea>
+                    </div>  
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" tabindex="2">Cancelar</button>
+                        <button type="submit" value="btnGuardar" class="btn btn-primary" translate="1" id="actualizar">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="contenedor">
+    </div>
+     </main>
+
+     
+    
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.14.2/dist/sweetalert2.all.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase.js"></script>
+     <!-- Optional JavaScript -->
+   <script src="dashboard.js"></script>
+</body>
+</html>
